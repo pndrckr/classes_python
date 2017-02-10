@@ -1,14 +1,16 @@
 class Employee(object):
-    BASE_SALARY = 5000
+    BASE_SALARY = 5000 # uppercase por que es una constante
+    employee_number = 0 # es global y cambiante entonces es en lowercase
 
-    def __init__(self, fname, sname, no_of_years, employee_number):
+    def __init__(self, fname, sname, no_of_years):
         self.fname = fname
         self.sname = sname
         self.no_of_years = no_of_years
-        self.employee_number = employee_number
+        Employee.employee_number += 1
+        self.employee_number = Employee.employee_number
 
-    #  calculate the ase salary plus any bonus based on the number of years worked
 
+    #  calculate the ase salary plus any bonus based on the number of years worked:
     def calculate_salary(self):
         bonus = 5000
         salary = self.BASE_SALARY

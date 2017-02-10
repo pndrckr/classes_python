@@ -1,9 +1,9 @@
 from employee import Employee
 
 class Developer(Employee):
-    def __init__(self, fname, sname, no_of_years, employee_number, prog_lenguage):
+    def __init__(self, fname, sname, no_of_years, prog_lenguage):
         self.prog_lenguage = prog_lenguage
-        Employee.__init__(self, fname, sname, no_of_years, employee_number)
+        Employee.__init__(self, fname, sname, no_of_years)
 
     def calculate_salary(self):
         bonus = 0
