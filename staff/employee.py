@@ -21,12 +21,8 @@ class Employee(object):
         return salary * bonus
 
     def details(self):
-        return "First Name: %s\n Surname: %s\n Years Worked: %s\n Employee Number: %s\n Salary: %s\n" % (
+        return " First Name: %s\n Surname: %s\n Years Worked: %s\n Employee Number: %s\n Salary: %s\n" % (
             self.fname, self.sname, self.no_of_years, self.employee_number, self.calculate_salary())
 
 
 
-tom = Employee ("Tom", "Birdy", 5, 456)
-
-
-print Employee.details(tom)
